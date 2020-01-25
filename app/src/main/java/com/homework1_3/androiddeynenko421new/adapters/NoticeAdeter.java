@@ -48,7 +48,7 @@ public class NoticeAdeter extends BaseAdapter {
         if(convertView != null){
             currentView = convertView;
         } else {
-            currentView = inflater.inflate(R.layout.item_list_view, parent);
+            currentView = inflater.inflate(R.layout.item_list_view, parent, false);
         }
 
         Notice notice = getItem(position);
