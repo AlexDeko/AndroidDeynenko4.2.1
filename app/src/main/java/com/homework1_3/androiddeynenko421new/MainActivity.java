@@ -28,14 +28,18 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBox = findViewById(R.id.checkBox);
         List<Notice> arrayList = new ArrayList<>();
         arrayList.add(new Notice("TopExample",
-                "help people", getDrawable(R.drawable.ic_launcher_foreground), checkBox));
+                "help people", R.drawable.ic_launcher_foreground,
+                checkBox.isChecked()));
         arrayList.add(new Notice("TopHelp",
-                "let it snow let it snow let it snow", getDrawable(R.drawable.ic_launcher_foreground), checkBox));
+                "let it snow let it snow let it snow",
+                R.drawable.ic_launcher_foreground, checkBox.isChecked()));
         arrayList.add(new Notice("Fast",
-                "ReadySteadyGo", getDrawable(R.drawable.ic_launcher_foreground), checkBox));
+                "ReadySteadyGo", R.drawable.ic_launcher_foreground,
+                checkBox.isChecked()));
 
         NoticeAdeter noticeAdeter = new NoticeAdeter(arrayList, this);
 
         listView.setAdapter(noticeAdeter);
     }
+
 }

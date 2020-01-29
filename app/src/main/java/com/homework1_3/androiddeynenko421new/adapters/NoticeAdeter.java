@@ -60,7 +60,6 @@ public class NoticeAdeter extends BaseAdapter {
 
             tittleView.setText(notice.getTittle());
             subtittleView.setText(notice.getSubtittle());
-            imageView.setImageDrawable(notice.getImage());
         }
         return currentView;
     }

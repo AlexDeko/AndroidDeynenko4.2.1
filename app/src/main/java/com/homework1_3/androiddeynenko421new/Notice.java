@@ -1,19 +1,18 @@
 package com.homework1_3.androiddeynenko421new;
 
-import android.graphics.drawable.Drawable;
-import android.widget.CheckBox;
+import androidx.annotation.DrawableRes;
 
 public class Notice {
     private String tittle;
     private String subtittle;
-    private Drawable image;
-    private CheckBox checkBox;
+    private @DrawableRes int resId;
+    private boolean isChecked;
 
-    public Notice(String tittle, String subtittle, Drawable image, CheckBox checkBox) {
+    public Notice(String tittle, String subtittle, int resId, boolean isChecked) {
         this.tittle = tittle;
         this.subtittle = subtittle;
-        this.image = image;
-        this.checkBox = checkBox;
+        this.resId = resId;
+        this.isChecked = isChecked;
     }
 
     public String getTittle() {
@@ -24,12 +23,12 @@ public class Notice {
         return subtittle;
     }
 
-    public Drawable getImage() {
-        return image;
+    public int getResId() {
+        return resId;
     }
 
-    public CheckBox getCheckBox() {
-        return checkBox;
+    public boolean getIsChecked() {
+        return isChecked;
     }
 
     public void setTittle(String tittle) {
@@ -40,12 +39,12 @@ public class Notice {
         this.subtittle = subtittle;
     }
 
-    public void setImage(Drawable imageID) {
-        this.image = imageID;
+    public void setResId(int resId) {
+        this.resId = resId;
     }
 
-    public void setCheckBox(CheckBox checkBox) {
-        this.checkBox = checkBox;
+    public void setIsChecked(boolean isChecked) {
+        this.isChecked = isChecked;
     }
 
     @Override
@@ -53,8 +52,8 @@ public class Notice {
         return "Notice{" +
                 "tittle='" + tittle + '\'' +
                 ", subtittle='" + subtittle + '\'' +
-                ", imageID=" + image +
-                ", checkBox=" + checkBox +
+                ", imageID=" + resId +
+                ", checkBox=" + isChecked +
                 '}';
     }
 
