@@ -56,8 +56,7 @@ public class NoticeAdeter extends BaseAdapter {
             TextView tittleView = currentView.findViewById(R.id.title);
             TextView subtittleView = currentView.findViewById(R.id.subTittle);
             CheckBox checkBoxView = currentView.findViewById(R.id.checkBox);
-            ImageView imageView = currentView.findViewById(R.id.imageView);
-
+            checkBoxView.setChecked(notice.getIsChecked());
             tittleView.setText(notice.getTittle());
             subtittleView.setText(notice.getSubtittle());
         }
