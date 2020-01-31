@@ -22,20 +22,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      //  Theme.AppCompat.Light.DarkActionBar"
-
         listView = findViewById(R.id.list);
-        CheckBox checkBox = findViewById(R.id.checkBox);
         List<Notice> arrayList = new ArrayList<>();
         arrayList.add(new Notice("TopExample",
                 "help people", R.drawable.ic_launcher_foreground,
-                checkBox.isChecked()));
+                true));
         arrayList.add(new Notice("TopHelp",
                 "let it snow let it snow let it snow",
-                R.drawable.ic_launcher_foreground, checkBox.isChecked()));
+                R.drawable.ic_launcher_foreground, true));
         arrayList.add(new Notice("Fast",
                 "ReadySteadyGo", R.drawable.ic_launcher_foreground,
-                checkBox.isChecked()));
+                true));
 
         NoticeAdeter noticeAdeter = new NoticeAdeter(arrayList, this);
 
